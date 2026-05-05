@@ -1,0 +1,4 @@
+tabela,coluna_textual,qtd_textos_validos,qtd_textos_vazios,total_palavras,total_caracteres,media_palavras_por_texto,mediana_palavras_por_texto,min_palavras,max_palavras,q1_palavras,q3_palavras,media_caracteres_por_texto,palavras_unicas,razao_tipo_token,hapax_legomena,proporcao_hapax
+MC1 - Nós,name,17412,0,41929,248394,2.4080519182173212,2.0,1,11,2.0,2.0,14.265678842177808,9425,0.22478475518137805,5343,0.5668965517241379
+MC1 - Nós,genre,4611,0,9230,53441,2.001734981565821,2.0,1,3,2.0,2.0,11.589893732379094,36,0.0039003250270855903,0,0.0
+MC1 - Nós,stage_name,523,0,967,5416,1.8489483747609943,2.0,1,7,1.0,2.0,10.35564053537285,615,0.6359875904860393,462,0.751219512195122

@@ -1,0 +1,11 @@
+tabela,variavel,tipo_pandas,tipo_interpretado,qtd_valores_unicos,qtd_faltantes,percentual_faltantes
+MC1 - Nós,Node Type,str,categórica/textual,5,0,0.0
+MC1 - Nós,name,str,categórica/textual,14070,0,0.0
+MC1 - Nós,single,object,categórica/textual,2,13797,79.24
+MC1 - Nós,release_date,str,categórica/textual,64,12801,73.52
+MC1 - Nós,genre,str,categórica/textual,26,12801,73.52
+MC1 - Nós,notable,object,categórica/textual,2,12801,73.52
+MC1 - Nós,id,int64,numérica,17412,0,0.0
+MC1 - Nós,written_date,str,categórica/textual,64,15957,91.64
+MC1 - Nós,stage_name,str,categórica/textual,523,16889,97.0
+MC1 - Nós,notoriety_date,str,categórica/textual,54,16763,96.27

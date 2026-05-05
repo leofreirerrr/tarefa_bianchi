@@ -1,0 +1,5 @@
+tabela,variavel,tipo_pandas,tipo_interpretado,qtd_valores_unicos,qtd_faltantes,percentual_faltantes
+MC1 - Relações,Edge Type,str,categórica/textual,12,0,0.0
+MC1 - Relações,source,int64,numérica,16042,0,0.0
+MC1 - Relações,target,int64,numérica,6040,0,0.0
+MC1 - Relações,key,int64,numérica,3,0,0.0
