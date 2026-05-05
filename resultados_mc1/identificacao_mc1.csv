@@ -1,2 +1,0 @@
-arquivo,formato,estrutura,quantidade_nos,quantidade_relacoes,descricao_inicial
-MC1_graph.json,JSON,Grafo direcionado e multigrafo,17412,37857,"Base em formato de grafo, contendo entidades musicais como nós e relações entre essas entidades como links."

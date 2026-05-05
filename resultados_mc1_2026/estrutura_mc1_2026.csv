@@ -1,0 +1,62 @@
+﻿tabela,variavel,tipo_pandas,tipo_interpretado,qtd_valores_unicos,qtd_faltantes,percentual_faltantes
+MC1 - Rounds,round_index,int64,numérica,23,0,0.0
+MC1 - Rounds,hour,str,categórica/textual,23,0,0.0
+MC1 - Rounds,event_headline,str,categórica/textual,22,0,0.0
+MC1 - Rounds,event_narrative,str,categórica/textual,23,0,0.0
+MC1 - Rounds,qtd_communications,int64,numérica,15,0,0.0
+MC1 - Rounds,qtd_participants,int64,numérica,6,0,0.0
+MC1 - Rounds,qtd_media_events,int64,numérica,2,0,0.0
+MC1 - Rounds,qtd_news,int64,numérica,6,0,0.0
+MC1 - Rounds,qtd_external_actor_actions,int64,numérica,4,0,0.0
+MC1 - Rounds,qtd_social_manager_alerts,int64,numérica,2,0,0.0
+MC1 - Rounds,qtd_agents_unavailable,int64,numérica,3,0,0.0
+MC1 - Rounds,qtd_critical_deadlines,int64,numérica,2,0,0.0
+MC1 - Rounds,market_snapshot,str,categórica/textual,21,0,0.0
+MC1 - Rounds,social_state,str,categórica/textual,18,0,0.0
+MC1 - Rounds,hour_dt,datetime64[us],temporal,23,0,0.0
+MC1 - Communications,round_index,int64,numérica,23,0,0.0
+MC1 - Communications,hour,str,categórica/textual,23,0,0.0
+MC1 - Communications,message_id,str,categórica/textual,912,0,0.0
+MC1 - Communications,agent_id,str,categórica/textual,7,0,0.0
+MC1 - Communications,agent_role,str,categórica/textual,7,0,0.0
+MC1 - Communications,agent_label,str,categórica/textual,7,0,0.0
+MC1 - Communications,channel,str,categórica/textual,6,0,0.0
+MC1 - Communications,recipients,str,categórica/textual,31,0,0.0
+MC1 - Communications,qtd_recipients,int64,numérica,5,0,0.0
+MC1 - Communications,message_type,str,categórica/textual,5,0,0.0
+MC1 - Communications,responding_to,str,categórica/textual,380,163,17.87
+MC1 - Communications,content,str,categórica/textual,824,0,0.0
+MC1 - Communications,timestamp,str,categórica/textual,912,0,0.0
+MC1 - Communications,internal_reacting,str,categórica/textual,19,893,97.92
+MC1 - Communications,internal_rationalizing,str,categórica/textual,6,906,99.34
+MC1 - Communications,internal_deliberating,str,categórica/textual,61,851,93.31
+MC1 - Communications,hour_dt,datetime64[us],temporal,23,0,0.0
+MC1 - Communications,timestamp_dt,datetime64[us],temporal,912,0,0.0
+MC1 - Communications,qtd_caracteres,int64,numérica,539,0,0.0
+MC1 - Communications,qtd_palavras,int64,numérica,211,0,0.0
+MC1 - Communications,qtd_frases,int64,numérica,34,0,0.0
+MC1 - Communications,media_palavras_por_frase,float64,numérica,321,0,0.0
+MC1 - Communications,texto_vazio,bool,booleana,1,0,0.0
+MC1 - Communications,texto_quase_vazio,bool,booleana,2,0,0.0
+MC1 - Communications,possui_link,bool,booleana,1,0,0.0
+MC1 - Communications,possui_html,bool,booleana,1,0,0.0
+MC1 - Communications,possui_hashtag,bool,booleana,2,0,0.0
+MC1 - Communications,possui_mencao,bool,booleana,2,0,0.0
+MC1 - Communications,possui_caracter_estranho,bool,booleana,1,0,0.0
+MC1 - Participants,round_index,int64,numérica,23,0,0.0
+MC1 - Participants,hour,str,categórica/textual,23,0,0.0
+MC1 - Participants,agent_id,str,categórica/textual,7,0,0.0
+MC1 - Participants,agent_role,str,categórica/textual,7,0,0.0
+MC1 - Participants,agent_label,str,categórica/textual,7,0,0.0
+MC1 - Participants,declared_action,str,categórica/textual,13,68,68.0
+MC1 - Participants,sentiment_at_turn,str,categórica/textual,2,68,68.0
+MC1 - Participants,action_classification,str,categórica/textual,5,68,68.0
+MC1 - Participants,hour_dt,datetime64[us],temporal,23,0,0.0
+MC1 - Media Events,round_index,int64,numérica,7,0,0.0
+MC1 - Media Events,hour,str,categórica/textual,7,0,0.0
+MC1 - Media Events,media_event,str,categórica/textual,7,0,0.0
+MC1 - Media Events,hour_dt,datetime64[us],temporal,7,0,0.0
+MC1 - News,round_index,int64,numérica,18,0,0.0
+MC1 - News,hour,str,categórica/textual,18,0,0.0
+MC1 - News,news,str,categórica/textual,20,0,0.0
+MC1 - News,hour_dt,datetime64[us],temporal,18,0,0.0

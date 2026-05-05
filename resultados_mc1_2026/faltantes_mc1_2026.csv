@@ -1,0 +1,62 @@
+﻿tabela,variavel,qtd_faltantes,percentual_faltantes
+MC1 - Rounds,round_index,0,0.0
+MC1 - Rounds,hour,0,0.0
+MC1 - Rounds,event_headline,0,0.0
+MC1 - Rounds,event_narrative,0,0.0
+MC1 - Rounds,qtd_communications,0,0.0
+MC1 - Rounds,qtd_participants,0,0.0
+MC1 - Rounds,qtd_media_events,0,0.0
+MC1 - Rounds,qtd_news,0,0.0
+MC1 - Rounds,qtd_external_actor_actions,0,0.0
+MC1 - Rounds,qtd_social_manager_alerts,0,0.0
+MC1 - Rounds,qtd_agents_unavailable,0,0.0
+MC1 - Rounds,qtd_critical_deadlines,0,0.0
+MC1 - Rounds,market_snapshot,0,0.0
+MC1 - Rounds,social_state,0,0.0
+MC1 - Rounds,hour_dt,0,0.0
+MC1 - Communications,round_index,0,0.0
+MC1 - Communications,hour,0,0.0
+MC1 - Communications,message_id,0,0.0
+MC1 - Communications,agent_id,0,0.0
+MC1 - Communications,agent_role,0,0.0
+MC1 - Communications,agent_label,0,0.0
+MC1 - Communications,channel,0,0.0
+MC1 - Communications,recipients,0,0.0
+MC1 - Communications,qtd_recipients,0,0.0
+MC1 - Communications,message_type,0,0.0
+MC1 - Communications,responding_to,163,17.87
+MC1 - Communications,content,0,0.0
+MC1 - Communications,timestamp,0,0.0
+MC1 - Communications,internal_reacting,893,97.92
+MC1 - Communications,internal_rationalizing,906,99.34
+MC1 - Communications,internal_deliberating,851,93.31
+MC1 - Communications,hour_dt,0,0.0
+MC1 - Communications,timestamp_dt,0,0.0
+MC1 - Communications,qtd_caracteres,0,0.0
+MC1 - Communications,qtd_palavras,0,0.0
+MC1 - Communications,qtd_frases,0,0.0
+MC1 - Communications,media_palavras_por_frase,0,0.0
+MC1 - Communications,texto_vazio,0,0.0
+MC1 - Communications,texto_quase_vazio,0,0.0
+MC1 - Communications,possui_link,0,0.0
+MC1 - Communications,possui_html,0,0.0
+MC1 - Communications,possui_hashtag,0,0.0
+MC1 - Communications,possui_mencao,0,0.0
+MC1 - Communications,possui_caracter_estranho,0,0.0
+MC1 - Participants,round_index,0,0.0
+MC1 - Participants,hour,0,0.0
+MC1 - Participants,agent_id,0,0.0
+MC1 - Participants,agent_role,0,0.0
+MC1 - Participants,agent_label,0,0.0
+MC1 - Participants,declared_action,68,68.0
+MC1 - Participants,sentiment_at_turn,68,68.0
+MC1 - Participants,action_classification,68,68.0
+MC1 - Participants,hour_dt,0,0.0
+MC1 - Media Events,round_index,0,0.0
+MC1 - Media Events,hour,0,0.0
+MC1 - Media Events,media_event,0,0.0
+MC1 - Media Events,hour_dt,0,0.0
+MC1 - News,round_index,0,0.0
+MC1 - News,hour,0,0.0
+MC1 - News,news,0,0.0
+MC1 - News,hour_dt,0,0.0
