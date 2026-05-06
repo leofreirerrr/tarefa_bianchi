@@ -1,0 +1,299 @@
+\documentclass[12pt]{article}
+
+\usepackage{sbc-template}
+\usepackage{graphicx,url}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{float}
+
+\sloppy
+
+\title{Análise Exploratória e Visualização das Bases MC1 e MC2 do VAST Challenge 2026}
+
+\author{Leonardo Freire\inst{1}}
+
+\address{
+Curso de Bacharelado em Sistemas de Informação -- Universidade Federal do Pará (UFPA)\\
+Belém -- PA -- Brasil
+\email{rodrigues.leonardo@icen.ufpa.br}
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This report presents an exploratory data analysis of the MC1 and MC2 datasets from VAST Challenge 2026. The analysis investigates the structure, data quality, descriptive statistics, textual characteristics, temporal behavior, outliers, and relationships between variables. The study also uses information visualization techniques to support the interpretation of communication patterns, operational events, textual content, and organizational structure.
+\end{abstract}
+
+\begin{resumo}
+Este relatório apresenta uma análise exploratória das bases MC1 e MC2 do VAST Challenge 2026. A análise investiga a estrutura dos dados, qualidade, estatísticas descritivas, características textuais, comportamento temporal, outliers e relações entre variáveis. Também são utilizadas técnicas de visualização da informação para apoiar a interpretação dos padrões de comunicação, eventos operacionais, conteúdo textual e estrutura organizacional das bases.
+\end{resumo}
+
+\section{Introdução}
+
+A análise exploratória de dados é uma etapa fundamental para compreender a estrutura, a qualidade e as limitações de uma base antes da aplicação de técnicas analíticas mais avançadas. Neste trabalho, são analisadas as bases MC1 e MC2 do VAST Challenge 2026, com foco na identificação de padrões estruturais, problemas de qualidade, características estatísticas e possibilidades de análise futura.
+
+A base MC1 representa uma crise corporativa envolvendo agentes de inteligência artificial que se comunicam por diferentes canais e tomam decisões sobre publicações e respostas institucionais. Já a base MC2 representa uma linha do tempo de eventos internos da organização Tenant Thread, incluindo ações realizadas por pessoas, agentes autônomos e sistemas internos.
+
+Além da análise estrutural, este relatório dá atenção especial à visualização da informação. Dessa forma, os gráficos foram escolhidos de acordo com a natureza das variáveis analisadas: gráficos de linha para dados temporais, barras horizontais para comparações categóricas, histogramas e boxplots para distribuições numéricas, mapas de calor para cruzamentos entre categorias e grafo para representação da estrutura organizacional.
+
+\section{Metodologia}
+
+A análise foi realizada em Python, utilizando principalmente as bibliotecas \textit{pandas} e \textit{matplotlib}. Inicialmente, os arquivos JSON foram carregados e transformados em tabelas derivadas, de modo a facilitar a análise tabular. Em seguida, foram verificadas dimensões das tabelas, tipos de variáveis, valores faltantes, registros duplicados e estatísticas descritivas.
+
+Para os campos textuais, foram calculadas métricas como quantidade de textos, total de palavras, total de caracteres, média e mediana de palavras por texto, quartis, palavras únicas, razão tipo-token, frequência de palavras, bigramas e trigramas. Também foram analisados possíveis problemas de limpeza textual, como textos vazios, duplicados, links, HTML, hashtags, menções e caracteres estranhos.
+
+Por fim, foram produzidas visualizações exploratórias para representar padrões temporais, distribuições, rankings, relações entre variáveis e estrutura de rede. As visualizações foram utilizadas não apenas como ilustração, mas como apoio à interpretação dos dados.
+
+\section{Análise Exploratória da Base MC1}
+
+\subsection{Identificação geral}
+
+A base MC1 está armazenada no arquivo \texttt{MC1\_final\_00.json}, em formato JSON. A estrutura principal da base é composta por uma lista de rodadas temporais, representadas pela chave \texttt{rounds}. A partir dessa estrutura, foram derivadas tabelas de rodadas, comunicações, participantes, eventos de mídia e notícias.
+
+A Tabela~\ref{tab:mc1_tabelas} apresenta as principais tabelas derivadas da base MC1.
+
+\begin{table}[H]
+\centering
+\caption{Tabelas derivadas da base MC1}
+\label{tab:mc1_tabelas}
+\begin{tabular}{lrrp{5.5cm}}
+\toprule
+\textbf{Tabela} & \textbf{Linhas} & \textbf{Colunas} & \textbf{Descrição} \\
+\midrule
+MC1 - Rounds & 23 & 15 & Cada rodada ou horário da crise. \\
+MC1 - Communications & 912 & 29 & Cada mensagem enviada por um agente. \\
+MC1 - Participants & 100 & 9 & Participação dos agentes em cada rodada. \\
+MC1 - Media Events & 7 & 4 & Eventos de mídia associados à crise. \\
+MC1 - News & 50 & 4 & Notícias relacionadas às rodadas. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+A unidade principal de observação da base MC1 é a rodada temporal da crise. No entanto, para fins de análise, a tabela mais relevante é a de comunicações, pois ela contém as mensagens enviadas pelos agentes e permite investigar tanto a dinâmica da crise quanto o conteúdo textual produzido.
+
+\subsection{Qualidade dos dados}
+
+A análise de qualidade mostrou que não foram encontrados registros duplicados nas tabelas estruturais derivadas do MC1. A tabela de rodadas não apresentou linhas incompletas. Por outro lado, a tabela de comunicações apresentou 912 linhas incompletas, o que indica que alguns campos opcionais não aparecem preenchidos em todos os registros.
+
+Essa incompletude não significa necessariamente erro, pois campos como estado interno do agente, resposta a outra mensagem ou metadados adicionais podem não se aplicar a todas as comunicações. Assim, a ausência de dados deve ser interpretada considerando a estrutura da base e o significado de cada variável.
+
+\begin{table}[H]
+\centering
+\caption{Resumo de qualidade da base MC1}
+\label{tab:mc1_qualidade}
+\begin{tabular}{lrrrr}
+\toprule
+\textbf{Tabela} & \textbf{Linhas} & \textbf{Colunas} & \textbf{Linhas incompletas} & \textbf{Duplicados} \\
+\midrule
+MC1 - Rounds & 23 & 15 & 0 & 0 \\
+MC1 - Communications & 912 & 29 & 912 & 0 \\
+MC1 - Participants & 100 & 9 & 68 & 0 \\
+MC1 - Media Events & 7 & 4 & 0 & 0 \\
+MC1 - News & 50 & 4 & 0 & 0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Caracterização textual}
+
+A base MC1 possui forte componente textual, principalmente na tabela de comunicações. Foram identificadas 912 mensagens, sem textos vazios. O total de palavras foi 62.577, com 391.444 caracteres. Em média, cada mensagem possui aproximadamente 68,6 palavras, enquanto a mediana é de 49 palavras.
+
+A diferença entre média e mediana indica que existem mensagens mais longas que elevam a média geral. Isso é coerente com o contexto de crise corporativa, no qual algumas comunicações são curtas e operacionais, enquanto outras podem conter orientações jurídicas, comunicados públicos ou explicações detalhadas.
+
+\begin{table}[H]
+\centering
+\caption{Métricas textuais da base MC1}
+\label{tab:mc1_texto}
+\begin{tabular}{lr}
+\toprule
+\textbf{Métrica} & \textbf{Valor} \\
+\midrule
+Quantidade de textos & 912 \\
+Textos vazios & 0 \\
+Textos quase vazios & 94 \\
+Total de palavras & 62.577 \\
+Total de caracteres & 391.444 \\
+Média de palavras por texto & 68,6 \\
+Mediana de palavras por texto & 49 \\
+Mínimo de palavras & 1 \\
+Máximo de palavras & 548 \\
+Q1 & 29 \\
+Q3 & 84 \\
+Palavras únicas sem stopwords & 3.792 \\
+Razão tipo-token & 0,094 \\
+Hapax legomena & 1.214 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Visualizações do MC1}
+
+A Figura~\ref{fig:mc1_rodadas} apresenta a quantidade de mensagens por rodada da crise. Essa visualização permite identificar os momentos de maior intensidade comunicacional.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.9\textwidth]{mc1/mc1_01_mensagens_por_rodada.png}
+\caption{Quantidade de mensagens por rodada da crise no MC1.}
+\label{fig:mc1_rodadas}
+\end{figure}
+
+A Figura~\ref{fig:mc1_agentes} mostra os agentes com maior número de mensagens. Observa-se que os agentes jurídico, social media e platform trust concentram grande parte das comunicações, indicando maior participação desses papéis na gestão da crise.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.9\textwidth]{mc1/mc1_02_barras_horizontais_agentes.png}
+\caption{Distribuição de mensagens por agente na base MC1.}
+\label{fig:mc1_agentes}
+\end{figure}
+
+A Figura~\ref{fig:mc1_heatmap} apresenta um mapa de calor cruzando agentes e canais de comunicação. Esse gráfico permite observar quais agentes utilizaram mais cada canal, mostrando padrões de atuação diferentes entre papéis.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.9\textwidth]{mc1/mc1_06_heatmap_agente_canal.png}
+\caption{Mapa de calor da frequência de mensagens por agente e canal no MC1.}
+\label{fig:mc1_heatmap}
+\end{figure}
+
+A Figura~\ref{fig:mc1_histograma} mostra a distribuição do tamanho das mensagens em quantidade de palavras. A maior parte das mensagens se concentra em tamanhos menores, mas há ocorrências de mensagens muito mais longas.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.9\textwidth]{mc1/mc1_04_histograma_tamanho_mensagens.png}
+\caption{Distribuição do tamanho das mensagens no MC1.}
+\label{fig:mc1_histograma}
+\end{figure}
+
+\subsection{Considerações parciais sobre o MC1}
+
+A análise do MC1 mostrou que a base representa uma crise comunicacional estruturada em rodadas temporais. A tabela de comunicações é a principal fonte de análise, pois permite investigar agentes, canais, tipos de mensagem e conteúdo textual.
+
+Os resultados indicam forte atuação dos agentes ligados ao jurídico, comunicação social e confiança de plataforma. A análise textual mostrou predominância de termos relacionados a governança, auditoria, confiança, publicações e comunicação institucional. Como limitação, destacam-se campos opcionais incompletos e mensagens duplicadas ou muito longas, que devem ser avaliadas separadamente antes de análises posteriores.
+
+\section{Análise Exploratória da Base MC2}
+
+\subsection{Identificação geral}
+
+A base MC2 é composta principalmente pelo arquivo \texttt{MC2 data.json}, em formato JSON, com aproximadamente 66,99 MB. Esse arquivo contém uma linha do tempo de eventos coletados por sistemas internos. Além dele, há o arquivo \texttt{org\_chart.json}, que representa o organograma da Tenant Thread em formato de grafo.
+
+\begin{table}[H]
+\centering
+\caption{Arquivos da base MC2}
+\label{tab:mc2_arquivos}
+\begin{tabular}{llrp{6cm}}
+\toprule
+\textbf{Arquivo} & \textbf{Formato} & \textbf{Tamanho} & \textbf{Descrição} \\
+\midrule
+MC2 data.json & JSON & 66,99 MB & Linha do tempo de eventos coletados por sistemas internos. \\
+org\_chart.json & JSON & 0,02 MB & Organograma da Tenant Thread em formato de grafo. \\
+MC2 data description.md & Markdown & 0,0012 MB & Documento explicativo da base. \\
+VAST Challenge 2026 MC2 Answer Sheet.htm & HTML & 0,08 MB & Arquivo auxiliar/template de resposta. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Estrutura dos dados}
+
+A base MC2 foi organizada em quatro tabelas principais: eventos, entidades envolvidas nos eventos, nós do organograma e relações do organograma. A tabela de eventos é a principal, com 185.147 registros e 84 colunas. Cada linha representa uma ação registrada pelos sistemas internos, pessoas ou agentes autônomos.
+
+\begin{table}[H]
+\centering
+\caption{Tabelas derivadas da base MC2}
+\label{tab:mc2_tabelas}
+\begin{tabular}{lrrp{5.5cm}}
+\toprule
+\textbf{Tabela} & \textbf{Linhas} & \textbf{Colunas} & \textbf{Descrição} \\
+\midrule
+MC2 - Events & 185.147 & 84 & Eventos registrados na linha do tempo. \\
+MC2 - Event Parties & 270.965 & 5 & Entidades envolvidas nos eventos. \\
+MC2 - Org Nodes & 75 & 7 & Nós do organograma. \\
+MC2 - Org Edges & 74 & 3 & Relações do organograma. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Qualidade dos dados}
+
+A tabela de eventos não apresentou registros duplicados, mas todas as linhas aparecem como incompletas. Isso ocorre porque os eventos possuem tipos diferentes e, portanto, nem todos os campos derivados de \texttt{details} se aplicam a todos os registros.
+
+A tabela de entidades envolvidas apresentou 19 registros duplicados, o que deve ser investigado. Esses registros podem representar repetições reais de entidades associadas a eventos semelhantes ou redundâncias geradas durante a expansão da lista de participantes.
+
+\begin{table}[H]
+\centering
+\caption{Resumo de qualidade da base MC2}
+\label{tab:mc2_qualidade}
+\begin{tabular}{lrrrr}
+\toprule
+\textbf{Tabela} & \textbf{Linhas} & \textbf{Colunas} & \textbf{Linhas incompletas} & \textbf{Duplicados} \\
+\midrule
+MC2 - Events & 185.147 & 84 & 185.147 & 0 \\
+MC2 - Event Parties & 270.965 & 5 & 0 & 19 \\
+MC2 - Org Nodes & 75 & 7 & 67 & 0 \\
+MC2 - Org Edges & 74 & 3 & 0 & 0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Visualizações do MC2}
+
+A Figura~\ref{fig:mc2_tempo} apresenta a evolução da quantidade de eventos por dia. Essa visualização permite identificar períodos de maior atividade e possíveis picos operacionais.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.9\textwidth]{mc2/mc2_01_linha_eventos_por_dia.png}
+\caption{Quantidade de eventos por dia na base MC2.}
+\label{fig:mc2_tempo}
+\end{figure}
+
+A Figura~\ref{fig:mc2_eventos} mostra os tipos de evento mais frequentes. Os eventos mais comuns estão associados à verificação de e-mails, atribuição de tarefas, leitura de arquivos e manipulação de arquivos.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.9\textwidth]{mc2/mc2_02_barras_horizontais_tipos_evento.png}
+\caption{Tipos de evento mais frequentes na base MC2.}
+\label{fig:mc2_eventos}
+\end{figure}
+
+A Figura~\ref{fig:mc2_heatmap} apresenta um mapa de calor da concentração de eventos por dia da semana e hora do dia. Esse tipo de visualização é útil para identificar padrões temporais de atividade.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.9\textwidth]{mc2/mc2_07_heatmap_dia_hora.png}
+\caption{Mapa de calor da concentração de eventos por dia da semana e hora na base MC2.}
+\label{fig:mc2_heatmap}
+\end{figure}
+
+A Figura~\ref{fig:mc2_grafo} apresenta o organograma da Tenant Thread em forma de grafo, permitindo visualizar a estrutura organizacional associada à base.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.9\textwidth]{mc2/mc2_10_grafo_organograma.png}
+\caption{Organograma da Tenant Thread representado como grafo.}
+\label{fig:mc2_grafo}
+\end{figure}
+
+\subsection{Considerações parciais sobre o MC2}
+
+A análise do MC2 mostrou que a base representa uma linha do tempo extensa de eventos internos da Tenant Thread. Os dados cobrem o período de 08/05/2046 a 16/07/2046 e incluem 185.147 eventos. Os eventos mais frequentes estão associados a e-mails, tarefas, arquivos e operações internas.
+
+A presença de muitos campos faltantes está relacionada à heterogeneidade dos tipos de eventos. Assim, a limpeza da base deve considerar o tipo de evento antes de remover ou preencher valores ausentes. A base também possui forte repetição textual, característica esperada em registros operacionais e logs de sistemas.
+
+\section{Comparação entre MC1 e MC2}
+
+As bases MC1 e MC2 possuem naturezas diferentes. O MC1 é mais voltado à comunicação entre agentes em uma crise corporativa, enquanto o MC2 representa uma linha do tempo operacional de eventos internos. Assim, o MC1 possui textos mais discursivos e comunicacionais, enquanto o MC2 apresenta registros mais curtos, padronizados e repetitivos.
+
+Em termos de visualização, o MC1 se beneficia de gráficos que mostram interações entre agentes, canais e mensagens. Já o MC2 exige visualizações voltadas para volume temporal, frequência de tipos de evento, entidades envolvidas e estrutura organizacional.
+
+\section{Considerações Finais}
+
+A análise exploratória permitiu compreender a estrutura, a qualidade e as principais características das bases MC1 e MC2. No MC1, destacam-se as comunicações entre agentes durante uma crise corporativa, com forte presença de temas relacionados a governança, jurídico, confiança de plataforma e comunicação pública. No MC2, destacam-se eventos operacionais internos, como ações sobre e-mails, arquivos, tarefas e sistemas.
+
+As principais limitações encontradas foram campos incompletos, alta heterogeneidade estrutural, textos duplicados e concentração de eventos em determinados períodos. Essas limitações não impedem a análise, mas indicam a necessidade de tratamento cuidadoso em etapas futuras.
+
+Como próximos passos, recomenda-se aplicar técnicas de TF-IDF para identificar termos característicos por agente ou tipo de evento, investigar agrupamentos temáticos, analisar eventos próximos à postagem anômala e explorar redes de interação entre pessoas, agentes e sistemas.
+
+\end{document}

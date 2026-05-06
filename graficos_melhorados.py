@@ -56,10 +56,13 @@ def heatmap_matriz(matriz, titulo, caminho, xlabel="", ylabel=""):
 
 
 # ==========================================================
-# MC1 - GRÁFICOS MELHORADOS
+# MC1 - GRÁFICOS MELHORADOS REVISADOS
 # ==========================================================
 
+mc1_rounds = pd.read_csv(pasta_mc1 / "mc1_rounds_2026.csv", encoding="utf-8-sig")
 mc1_comms = pd.read_csv(pasta_mc1 / "mc1_communications_2026.csv", encoding="utf-8-sig")
+
+mc1_rounds["hour_dt"] = pd.to_datetime(mc1_rounds["hour_dt"], errors="coerce")
 mc1_comms["timestamp_dt"] = pd.to_datetime(mc1_comms["timestamp_dt"], errors="coerce")
 
 freq_agent = pd.read_csv(pasta_mc1 / "frequencia_agent_id_mc1_2026.csv", encoding="utf-8-sig")
@@ -67,22 +70,23 @@ freq_channel = pd.read_csv(pasta_mc1 / "frequencia_channel_mc1_2026.csv", encodi
 freq_words = pd.read_csv(pasta_mc1 / "frequencia_palavras_mc1_2026.csv", encoding="utf-8-sig")
 
 
-# 1. Linha temporal: mensagens por horário
-mensagens_por_hora = (
-    mc1_comms
-    .groupby("timestamp_dt")
-    .size()
-    .reset_index(name="qtd_mensagens")
-    .sort_values("timestamp_dt")
-)
-
+# 1. Linha: mensagens por rodada da crise
 plt.figure(figsize=(12, 5))
-plt.plot(mensagens_por_hora["timestamp_dt"], mensagens_por_hora["qtd_mensagens"], marker="o")
-plt.title("MC1 - Evolução das mensagens ao longo do tempo")
-plt.xlabel("Tempo")
+plt.plot(
+    mc1_rounds["round_index"],
+    mc1_rounds["qtd_communications"],
+    marker="o",
+    label="Mensagens por rodada"
+)
+plt.title("MC1 - Quantidade de mensagens por rodada da crise")
+plt.xlabel("Rodada da crise")
 plt.ylabel("Quantidade de mensagens")
-plt.xticks(rotation=45, ha="right")
-salvar_figura(saida_mc1 / "mc1_01_linha_mensagens_tempo.png")
+plt.xticks(mc1_rounds["round_index"])
+plt.legend()
+
+salvar_figura(
+    saida_mc1 / "mc1_01_mensagens_por_rodada.png"
+)
 
 
 # 2. Barras horizontais: mensagens por agente
@@ -113,11 +117,15 @@ plt.hist(mc1_comms["qtd_palavras"], bins=35)
 plt.title("MC1 - Distribuição do tamanho das mensagens")
 plt.xlabel("Quantidade de palavras")
 plt.ylabel("Frequência")
-salvar_figura(saida_mc1 / "mc1_04_histograma_tamanho_mensagens.png")
+
+salvar_figura(
+    saida_mc1 / "mc1_04_histograma_tamanho_mensagens.png"
+)
 
 
 # 5. Boxplot: tamanho das mensagens por canal
 canais_principais = mc1_comms["channel"].value_counts().head(6).index
+
 dados_box = [
     mc1_comms.loc[mc1_comms["channel"] == canal, "qtd_palavras"].dropna()
     for canal in canais_principais
@@ -125,31 +133,62 @@ dados_box = [
 
 plt.figure(figsize=(11, 6))
 plt.boxplot(dados_box, labels=canais_principais, vert=True)
-plt.title("MC1 - Distribuição do tamanho das mensagens por canal")
+plt.title("MC1 - Tamanho das mensagens por canal")
 plt.xlabel("Canal")
 plt.ylabel("Quantidade de palavras")
 plt.xticks(rotation=45, ha="right")
-salvar_figura(saida_mc1 / "mc1_05_boxplot_tamanho_por_canal.png")
 
-
-# 6. Heatmap: agente x canal
-matriz_agente_canal = pd.crosstab(mc1_comms["agent_id"], mc1_comms["channel"])
-heatmap_matriz(
-    matriz_agente_canal,
-    "MC1 - Frequência de mensagens por agente e canal",
-    saida_mc1 / "mc1_06_heatmap_agente_canal.png",
-    xlabel="Canal",
-    ylabel="Agente"
+salvar_figura(
+    saida_mc1 / "mc1_05_boxplot_tamanho_por_canal.png"
 )
 
 
-# 7. Dispersão: destinatários x tamanho da mensagem
-plt.figure(figsize=(9, 6))
-plt.scatter(mc1_comms["qtd_recipients"], mc1_comms["qtd_palavras"], alpha=0.35)
-plt.title("MC1 - Relação entre destinatários e tamanho da mensagem")
-plt.xlabel("Quantidade de destinatários")
+# 6. Heatmap: agente x canal
+matriz_agente_canal = pd.crosstab(
+    mc1_comms["agent_id"],
+    mc1_comms["channel"]
+)
+
+plt.figure(figsize=(10, 7))
+plt.imshow(matriz_agente_canal.values, aspect="auto")
+plt.colorbar(label="Quantidade de mensagens")
+plt.title("MC1 - Frequência de mensagens por agente e canal")
+plt.xlabel("Canal")
+plt.ylabel("Agente")
+plt.xticks(
+    range(len(matriz_agente_canal.columns)),
+    matriz_agente_canal.columns,
+    rotation=45,
+    ha="right"
+)
+plt.yticks(
+    range(len(matriz_agente_canal.index)),
+    matriz_agente_canal.index
+)
+
+salvar_figura(
+    saida_mc1 / "mc1_06_heatmap_agente_canal.png"
+)
+
+
+# 7. Boxplot: tamanho das mensagens por tipo de mensagem
+tipos_mensagem = mc1_comms["message_type"].value_counts().head(6).index
+
+dados_box_tipo = [
+    mc1_comms.loc[mc1_comms["message_type"] == tipo, "qtd_palavras"].dropna()
+    for tipo in tipos_mensagem
+]
+
+plt.figure(figsize=(11, 6))
+plt.boxplot(dados_box_tipo, labels=tipos_mensagem, vert=True)
+plt.title("MC1 - Tamanho das mensagens por tipo de mensagem")
+plt.xlabel("Tipo de mensagem")
 plt.ylabel("Quantidade de palavras")
-salvar_figura(saida_mc1 / "mc1_07_dispersao_destinatarios_tamanho.png")
+plt.xticks(rotation=45, ha="right")
+
+salvar_figura(
+    saida_mc1 / "mc1_07_boxplot_tamanho_por_tipo_mensagem.png"
+)
 
 
 # 8. Barras horizontais: palavras mais frequentes
