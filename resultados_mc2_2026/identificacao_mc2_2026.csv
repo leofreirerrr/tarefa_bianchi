@@ -1,0 +1,5 @@
+﻿arquivo,formato,tamanho_mb,descricao_inicial
+MC2 data.json,JSON,66.99,Linha do tempo de eventos coletados por sistemas internos.
+org_chart.json,JSON,0.02,Organograma da Tenant Thread em formato de grafo.
+MC2 data description.md,Markdown,0.0012,Documento explicativo da base MC2.
+VAST Challenge 2026 MC2 Answer Sheet.htm,HTML,0.08,Arquivo auxiliar/template de resposta do desafio.

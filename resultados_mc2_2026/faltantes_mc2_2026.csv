@@ -1,0 +1,100 @@
+﻿tabela,variavel,qtd_faltantes,percentual_faltantes
+MC2 - Events,short_name,0,0.0
+MC2 - Events,parties,0,0.0
+MC2 - Events,when,0,0.0
+MC2 - Events,id,0,0.0
+MC2 - Events,details_from,170429,92.05
+MC2 - Events,details_to,170429,92.05
+MC2 - Events,details_subject,170120,91.88
+MC2 - Events,details_status,170474,92.07
+MC2 - Events,details_person,131566,71.06
+MC2 - Events,details_calendar_emails_sent,182190,98.4
+MC2 - Events,details_meeting_organizer,182190,98.4
+MC2 - Events,details_meeting_participants,182190,98.4
+MC2 - Events,details_meeting_time,182190,98.4
+MC2 - Events,details_a2a_from,182190,98.4
+MC2 - Events,details_a2a_to,182190,98.4
+MC2 - Events,details_a2a_action,182190,98.4
+MC2 - Events,details_a2a_timestamp,182190,98.4
+MC2 - Events,details_a2a_payload_organizer,182190,98.4
+MC2 - Events,details_a2a_payload_participants,182190,98.4
+MC2 - Events,details_a2a_payload_time,182190,98.4
+MC2 - Events,details_task,127511,68.87
+MC2 - Events,details_time,181125,97.83
+MC2 - Events,details_details_person,183393,99.05
+MC2 - Events,details_details_task,179776,97.1
+MC2 - Events,details_details_participants,181573,98.07
+MC2 - Events,details_details_time,181573,98.07
+MC2 - Events,details_details_subject,181573,98.07
+MC2 - Events,details_access_type,182213,98.42
+MC2 - Events,details_action,132612,71.63
+MC2 - Events,details_target,116112,62.71
+MC2 - Events,details_meeting_proposed_with,184554,99.68
+MC2 - Events,details_file,183643,99.19
+MC2 - Events,details_content_length,183937,99.35
+MC2 - Events,details_contacts,182175,98.39
+MC2 - Events,details_details_contacts,181530,98.05
+MC2 - Events,details_topic,181735,98.16
+MC2 - Events,details_advice,181735,98.16
+MC2 - Events,details_details_topic,181515,98.04
+MC2 - Events,details_sent_to,184838,99.83
+MC2 - Events,details_reply_sent_to,183988,99.37
+MC2 - Events,details_draft_for_review_from,184591,99.7
+MC2 - Events,details_draft_for_review_to,184591,99.7
+MC2 - Events,details_draft_for_review_subject,184591,99.7
+MC2 - Events,details_draft_for_review_body,184591,99.7
+MC2 - Events,details_draft_for_review_formal,184591,99.7
+MC2 - Events,details_draft_for_review_needs_review,184591,99.7
+MC2 - Events,details_target_agent,184912,99.87
+MC2 - Events,details_args_path,184912,99.87
+MC2 - Events,details_room,177727,95.99
+MC2 - Events,details_name,177727,95.99
+MC2 - Events,details_granted,177727,95.99
+MC2 - Events,details_file_saved,184494,99.65
+MC2 - Events,details_content,184697,99.76
+MC2 - Events,details_forum,184934,99.88
+MC2 - Events,details_poster_id,184922,99.88
+MC2 - Events,details_timestamp,184922,99.88
+MC2 - Events,details_details_forum,185014,99.93
+MC2 - Events,details_details_content,184858,99.84
+MC2 - Events,details_question,184737,99.78
+MC2 - Events,details_response,184737,99.78
+MC2 - Events,details_size_hint,170094,91.87
+MC2 - Events,details_content_source,185144,100.0
+MC2 - Events,details_combo,170096,91.87
+MC2 - Events,details_source,170096,91.87
+MC2 - Events,details_virus,109893,59.35
+MC2 - Events,details_word_count,170096,91.87
+MC2 - Events,details_details_combo,170097,91.87
+MC2 - Events,details_spread,185143,100.0
+MC2 - Events,qtd_parties,0,0.0
+MC2 - Events,parties_texto,0,0.0
+MC2 - Events,tipos_parties,0,0.0
+MC2 - Events,timestamp,0,0.0
+MC2 - Events,data,0,0.0
+MC2 - Events,hora,0,0.0
+MC2 - Events,dia_semana,0,0.0
+MC2 - Events,texto_evento,0,0.0
+MC2 - Events,qtd_caracteres_texto,0,0.0
+MC2 - Events,qtd_palavras_texto,0,0.0
+MC2 - Events,tem_texto,0,0.0
+MC2 - Events,possui_link,0,0.0
+MC2 - Events,possui_html,0,0.0
+MC2 - Events,possui_hashtag,0,0.0
+MC2 - Events,possui_mencao,0,0.0
+MC2 - Events,possui_caracter_estranho,0,0.0
+MC2 - Event Parties,event_id,0,0.0
+MC2 - Event Parties,short_name,0,0.0
+MC2 - Event Parties,timestamp,0,0.0
+MC2 - Event Parties,party,0,0.0
+MC2 - Event Parties,party_type,0,0.0
+MC2 - Org Nodes,id,0,0.0
+MC2 - Org Nodes,label,0,0.0
+MC2 - Org Nodes,type,0,0.0
+MC2 - Org Nodes,title,67,89.33
+MC2 - Org Nodes,grau_saida,0,0.0
+MC2 - Org Nodes,grau_entrada,0,0.0
+MC2 - Org Nodes,grau_total,0,0.0
+MC2 - Org Edges,source,0,0.0
+MC2 - Org Edges,target,0,0.0
+MC2 - Org Edges,relation,0,0.0

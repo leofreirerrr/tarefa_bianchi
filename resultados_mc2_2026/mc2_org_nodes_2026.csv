@@ -1,0 +1,76 @@
+﻿id,label,type,title,grau_saida,grau_entrada,grau_total
+company:tenant_thread,Tenant Thread,company,,6,0,6
+department:executive_suite,Executive Suite,department,,3,1,4
+department:products,Products,department,,5,1,6
+department:human_resources,Human Resources,department,,4,1,5
+department:legal,Legal,department,,6,1,7
+department:information_technologies,Information Technologies,department,,4,1,5
+department:customer_support,Customer Support,department,,5,1,6
+team:residential_app,Residential App,team,,3,1,4
+team:property_ops_console,Property Ops Console,team,,3,1,4
+team:analytics_suite,Analytics Suite,team,,3,1,4
+team:integrations,Integrations,team,,3,1,4
+team:hiring,Hiring,team,,2,1,3
+team:benefits,Benefits,team,,2,1,3
+team:professional_development,Professional Development,team,,1,1,2
+team:ip,IP,team,,1,1,2
+team:mergers_and_acquisitions,Mergers and Acquisitions,team,,1,1,2
+team:corporate_contracts,Corporate Contracts,team,,2,1,3
+team:client_contracts,Client Contracts,team,,2,1,3
+team:finance,Finance,team,,2,1,3
+team:ai_systems,AI Systems,team,,2,1,3
+team:infrastructure,Infrastructure,team,,2,1,3
+team:helpdesk,Helpdesk,team,,2,1,3
+team:phone_center,Phone Center,team,,3,1,4
+team:billing,Billing,team,,2,1,3
+team:concierge,Concierge,team,,2,1,3
+team:public_relations,Public Relations,team,,3,1,4
+person:liam_anchor,Liam Anchor,person,CEO,0,1,1
+person:emma_harbor,Emma Harbor,person,CFO,0,1,1
+person:noah_mariner,Noah Mariner,person,COO,0,1,1
+person:olivia_keel,Olivia Keel,person,Department Lead,0,1,1
+person:william_rudder,William Rudder,person,,0,1,1
+person:ava_tiller,Ava Tiller,person,,0,1,1
+person:james_stern,James Stern,person,,0,1,1
+person:sophia_beacon,Sophia Beacon,person,,0,1,1
+person:benjamin_mooring,Benjamin Mooring,person,,0,1,1
+person:mia_fender,Mia Fender,person,,0,1,1
+person:lucas_compass,Lucas Compass,person,,0,1,1
+person:charlotte_current,Charlotte Current,person,,0,1,1
+person:henry_sail,Henry Sail,person,,0,1,1
+person:amelia_skiff,Amelia Skiff,person,,0,1,1
+person:alexander_jetty,Alexander Jetty,person,,0,1,1
+person:evelyn_dock,Evelyn Dock,person,,0,1,1
+person:michael_capstan,Michael Capstan,person,Department Lead,0,1,1
+person:harper_oar,Harper Oar,person,,0,1,1
+person:daniel_gangway,Daniel Gangway,person,,0,1,1
+person:ella_pilot,Ella Pilot,person,,0,1,1
+person:matthew_tide,Matthew Tide,person,,0,1,1
+person:scarlett_wharf,Scarlett Wharf,person,,0,1,1
+person:david_breakwater,David Breakwater,person,Department Lead,0,1,1
+person:avery_sextant,Avery Sextant,person,,0,1,1
+person:joseph_buoy,Joseph Buoy,person,,0,1,1
+person:abigail_spinnaker,Abigail Spinnaker,person,,0,1,1
+person:sebastian_cutter,Sebastian Cutter,person,,0,1,1
+person:emily_ferry,Emily Ferry,person,,0,1,1
+person:jack_helm,Jack Helm,person,,0,1,1
+person:grace_lifeboat,Grace Lifeboat,person,,0,1,1
+person:samuel_gull,Samuel Gull,person,,0,1,1
+person:chloe_ballast,Chloe Ballast,person,Department Lead,0,1,1
+person:levi_signal,Levi Signal,person,,0,1,1
+person:victoria_rigging,Victoria Rigging,person,,0,1,1
+person:owen_hatch,Owen Hatch,person,,0,1,1
+person:lily_anchorline,Lily Anchorline,person,,0,1,1
+person:gabriel_sonar,Gabriel Sonar,person,,0,1,1
+person:zoey_drydock,Zoey Drydock,person,,0,1,1
+person:john_windward,John Windward,person,Department Lead,0,1,1
+person:nora_bulkhead,Nora Bulkhead,person,,0,1,1
+person:julian_seaway,Julian Seaway,person,,0,1,1
+person:hannah_starboard,Hannah Starboard,person,,0,1,1
+person:isaac_mast,Isaac Mast,person,,0,1,1
+person:audrey_portside,Audrey Portside,person,,0,1,1
+person:christopher_jettyline,Christopher Jettyline,person,,0,1,1
+person:layla_channel,Layla Channel,person,,0,1,1
+person:anthony_reef,Anthony Reef,person,,0,1,1
+person:aria_towline,Aria Towline,person,,0,1,1
+person:dylan_hawser,Dylan Hawser,person,,0,1,1

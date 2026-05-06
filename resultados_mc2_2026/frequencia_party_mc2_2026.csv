@@ -1,0 +1,202 @@
+﻿party,frequencia_absoluta,frequencia_relativa_percentual
+system:file_system,45165,16.67
+Agent/person:zoey_drydock,30339,11.2
+Agent/person:gabriel_sonar,21613,7.98
+Agent/person:owen_hatch,15770,5.82
+Agent/person:evelyn_dock,10254,3.78
+person:zoey_drydock,8139,3.0
+person:gabriel_sonar,6042,2.23
+person:owen_hatch,5075,1.87
+person:evelyn_dock,4176,1.54
+world:calendar,2957,1.09
+person:olivia_keel,2285,0.84
+person:david_breakwater,2200,0.81
+person:daniel_gangway,2170,0.8
+person:chloe_ballast,2166,0.8
+person:william_rudder,2130,0.79
+person:matthew_tide,2120,0.78
+person:ella_pilot,2109,0.78
+person:julian_seaway,2061,0.76
+person:liam_anchor,2046,0.76
+person:alexander_jetty,2023,0.75
+person:dylan_hawser,2022,0.75
+person:levi_signal,2019,0.75
+person:sebastian_cutter,2015,0.74
+person:james_stern,2011,0.74
+person:scarlett_wharf,2002,0.74
+person:victoria_rigging,2000,0.74
+person:noah_mariner,1996,0.74
+person:audrey_portside,1982,0.73
+person:charlotte_current,1981,0.73
+person:jack_helm,1981,0.73
+person:christopher_jettyline,1964,0.72
+person:michael_capstan,1962,0.72
+person:sophia_beacon,1956,0.72
+person:joseph_buoy,1946,0.72
+person:abigail_spinnaker,1925,0.71
+person:layla_channel,1914,0.71
+person:benjamin_mooring,1897,0.7
+person:avery_sextant,1896,0.7
+person:ava_tiller,1896,0.7
+person:mia_fender,1885,0.7
+person:nora_bulkhead,1878,0.69
+person:henry_sail,1875,0.69
+person:harper_oar,1870,0.69
+person:emma_harbor,1866,0.69
+person:aria_towline,1858,0.69
+person:lily_anchorline,1856,0.68
+person:anthony_reef,1847,0.68
+person:lucas_compass,1832,0.68
+person:amelia_skiff,1811,0.67
+person:john_windward,1808,0.67
+person:emily_ferry,1807,0.67
+person:hannah_starboard,1772,0.65
+person:grace_lifeboat,1734,0.64
+person:samuel_gull,1728,0.64
+person:isaac_mast,1646,0.61
+Agent/person:olivia_keel,764,0.28
+Agent/person:levi_signal,755,0.28
+Agent/person:victoria_rigging,754,0.28
+Agent/person:chloe_ballast,681,0.25
+Agent/person:daniel_gangway,678,0.25
+Agent/person:lily_anchorline,646,0.24
+Agent/person:liam_anchor,635,0.23
+Agent/person:matthew_tide,635,0.23
+Agent/person:james_stern,615,0.23
+Agent/person:henry_sail,581,0.21
+Agent/person:ella_pilot,576,0.21
+Agent/person:mia_fender,572,0.21
+Agent/person:amelia_skiff,570,0.21
+Agent/person:audrey_portside,556,0.21
+Agent/person:julian_seaway,525,0.19
+Agent/person:sebastian_cutter,521,0.19
+Agent/person:noah_mariner,519,0.19
+Agent/person:nora_bulkhead,517,0.19
+Agent/person:benjamin_mooring,513,0.19
+Agent/person:michael_capstan,508,0.19
+Agent/person:jack_helm,508,0.19
+Agent/person:harper_oar,500,0.18
+Agent/person:david_breakwater,498,0.18
+Agent/person:john_windward,498,0.18
+Agent/person:hannah_starboard,494,0.18
+Agent/person:emma_harbor,477,0.18
+Agent/person:sophia_beacon,476,0.18
+Agent/person:aria_towline,473,0.17
+Agent/person:charlotte_current,469,0.17
+Agent/person:dylan_hawser,468,0.17
+Agent/person:william_rudder,456,0.17
+Agent/person:abigail_spinnaker,454,0.17
+Agent/person:ava_tiller,450,0.17
+Agent/person:scarlett_wharf,448,0.17
+Agent/person:emily_ferry,444,0.16
+Agent/person:lucas_compass,443,0.16
+Agent/person:grace_lifeboat,442,0.16
+Agent/person:alexander_jetty,436,0.16
+Agent/person:avery_sextant,434,0.16
+Agent/person:christopher_jettyline,421,0.16
+Agent/person:samuel_gull,421,0.16
+Agent/person:joseph_buoy,413,0.15
+Agent/person:layla_channel,411,0.15
+Agent/person:anthony_reef,393,0.15
+Agent/person:isaac_mast,302,0.11
+system:saidit,179,0.07
+Hannah Starboard,162,0.06
+Noah Mariner,160,0.06
+Lily Anchorline,160,0.06
+Ava Tiller,160,0.06
+Amelia Skiff,158,0.06
+Liam Anchor,158,0.06
+Chloe Ballast,156,0.06
+Nora Bulkhead,156,0.06
+Emma Harbor,156,0.06
+Harper Oar,154,0.06
+Lucas Compass,154,0.06
+Matthew Tide,154,0.06
+Samuel Gull,154,0.06
+Sebastian Cutter,154,0.06
+Aria Towline,154,0.06
+Mia Fender,154,0.06
+Owen Hatch,152,0.06
+Anthony Reef,152,0.06
+Victoria Rigging,152,0.06
+John Windward,152,0.06
+Levi Signal,152,0.06
+Gabriel Sonar,152,0.06
+David Breakwater,152,0.06
+Alexander Jetty,152,0.06
+James Stern,152,0.06
+Ella Pilot,150,0.06
+Scarlett Wharf,150,0.06
+Daniel Gangway,150,0.06
+Abigail Spinnaker,150,0.06
+Benjamin Mooring,150,0.06
+Joseph Buoy,150,0.06
+Layla Channel,150,0.06
+Olivia Keel,150,0.06
+Jack Helm,150,0.06
+Michael Capstan,150,0.06
+Dylan Hawser,148,0.05
+Evelyn Dock,148,0.05
+Christopher Jettyline,148,0.05
+Audrey Portside,148,0.05
+Grace Lifeboat,148,0.05
+Sophia Beacon,148,0.05
+Avery Sextant,148,0.05
+Isaac Mast,148,0.05
+Julian Seaway,146,0.05
+Emily Ferry,146,0.05
+Zoey Drydock,144,0.05
+Henry Sail,144,0.05
+Charlotte Current,144,0.05
+William Rudder,140,0.05
+system:flex,120,0.04
+agent:person:olivia_keel,61,0.02
+agent:person:matthew_tide,61,0.02
+agent:person:amelia_skiff,61,0.02
+agent:person:sophia_beacon,60,0.02
+agent:person:evelyn_dock,60,0.02
+agent:person:harper_oar,59,0.02
+agent:person:nora_bulkhead,58,0.02
+agent:person:ella_pilot,58,0.02
+agent:person:christopher_jettyline,57,0.02
+agent:person:levi_signal,57,0.02
+agent:person:zoey_drydock,56,0.02
+agent:person:dylan_hawser,56,0.02
+agent:person:charlotte_current,56,0.02
+agent:person:liam_anchor,55,0.02
+agent:person:julian_seaway,55,0.02
+agent:person:hannah_starboard,55,0.02
+agent:person:chloe_ballast,54,0.02
+agent:person:emily_ferry,54,0.02
+agent:person:michael_capstan,54,0.02
+agent:person:david_breakwater,54,0.02
+agent:person:henry_sail,54,0.02
+agent:person:aria_towline,53,0.02
+agent:person:sebastian_cutter,53,0.02
+agent:person:alexander_jetty,53,0.02
+agent:person:audrey_portside,53,0.02
+agent:person:james_stern,53,0.02
+agent:person:joseph_buoy,52,0.02
+agent:person:john_windward,52,0.02
+agent:person:noah_mariner,51,0.02
+agent:person:scarlett_wharf,51,0.02
+agent:person:emma_harbor,51,0.02
+agent:person:victoria_rigging,50,0.02
+agent:person:jack_helm,50,0.02
+agent:person:avery_sextant,50,0.02
+agent:person:grace_lifeboat,50,0.02
+agent:person:william_rudder,50,0.02
+agent:person:benjamin_mooring,50,0.02
+agent:person:gabriel_sonar,48,0.02
+agent:person:daniel_gangway,48,0.02
+agent:person:lucas_compass,48,0.02
+agent:person:lily_anchorline,48,0.02
+agent:person:abigail_spinnaker,48,0.02
+agent:person:layla_channel,47,0.02
+agent:person:ava_tiller,47,0.02
+agent:person:samuel_gull,47,0.02
+agent:person:mia_fender,47,0.02
+system:email_server,45,0.02
+agent:person:anthony_reef,45,0.02
+agent:person:owen_hatch,43,0.02
+agent:person:isaac_mast,40,0.01

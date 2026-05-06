@@ -1,0 +1,100 @@
+﻿tabela,variavel,tipo_pandas,tipo_interpretado,qtd_valores_unicos,qtd_faltantes,percentual_faltantes
+MC2 - Events,short_name,str,categórica/textual,24,0,0.0
+MC2 - Events,parties,object,categórica/textual,5815,0,0.0
+MC2 - Events,when,float64,numérica,171695,0,0.0
+MC2 - Events,id,int64,numérica,185147,0,0.0
+MC2 - Events,details_from,str,categórica/textual,49,170429,92.05
+MC2 - Events,details_to,str,categórica/textual,49,170429,92.05
+MC2 - Events,details_subject,str,categórica/textual,80,170120,91.88
+MC2 - Events,details_status,str,categórica/textual,2,170474,92.07
+MC2 - Events,details_person,str,categórica/textual,49,131566,71.06
+MC2 - Events,details_calendar_emails_sent,object,categórica/textual,1828,182190,98.4
+MC2 - Events,details_meeting_organizer,str,categórica/textual,49,182190,98.4
+MC2 - Events,details_meeting_participants,object,categórica/textual,1828,182190,98.4
+MC2 - Events,details_meeting_time,str,categórica/textual,2740,182190,98.4
+MC2 - Events,details_a2a_from,str,categórica/textual,49,182190,98.4
+MC2 - Events,details_a2a_to,str,categórica/textual,1,182190,98.4
+MC2 - Events,details_a2a_action,str,categórica/textual,1,182190,98.4
+MC2 - Events,details_a2a_timestamp,str,categórica/textual,2957,182190,98.4
+MC2 - Events,details_a2a_payload_organizer,str,categórica/textual,49,182190,98.4
+MC2 - Events,details_a2a_payload_participants,object,categórica/textual,1828,182190,98.4
+MC2 - Events,details_a2a_payload_time,str,categórica/textual,2740,182190,98.4
+MC2 - Events,details_task,str,categórica/textual,170,127511,68.87
+MC2 - Events,details_time,str,categórica/textual,471,181125,97.83
+MC2 - Events,details_details_person,str,categórica/textual,17,183393,99.05
+MC2 - Events,details_details_task,str,categórica/textual,189,179776,97.1
+MC2 - Events,details_details_participants,object,categórica/textual,2153,181573,98.07
+MC2 - Events,details_details_time,str,categórica/textual,3261,181573,98.07
+MC2 - Events,details_details_subject,str,categórica/textual,424,181573,98.07
+MC2 - Events,details_access_type,str,categórica/textual,3,182213,98.42
+MC2 - Events,details_action,str,categórica/textual,4,132612,71.63
+MC2 - Events,details_target,str,categórica/textual,15328,116112,62.71
+MC2 - Events,details_meeting_proposed_with,str,categórica/textual,28,184554,99.68
+MC2 - Events,details_file,str,categórica/textual,154,183643,99.19
+MC2 - Events,details_content_length,float64,numérica,900,183937,99.35
+MC2 - Events,details_contacts,object,categórica/textual,2954,182175,98.39
+MC2 - Events,details_details_contacts,object,categórica/textual,3557,181530,98.05
+MC2 - Events,details_topic,str,categórica/textual,523,181735,98.16
+MC2 - Events,details_advice,str,categórica/textual,1420,181735,98.16
+MC2 - Events,details_details_topic,str,categórica/textual,342,181515,98.04
+MC2 - Events,details_sent_to,str,categórica/textual,49,184838,99.83
+MC2 - Events,details_reply_sent_to,str,categórica/textual,28,183988,99.37
+MC2 - Events,details_draft_for_review_from,str,categórica/textual,49,184591,99.7
+MC2 - Events,details_draft_for_review_to,str,categórica/textual,28,184591,99.7
+MC2 - Events,details_draft_for_review_subject,str,categórica/textual,5,184591,99.7
+MC2 - Events,details_draft_for_review_body,str,categórica/textual,2,184591,99.7
+MC2 - Events,details_draft_for_review_formal,object,categórica/textual,2,184591,99.7
+MC2 - Events,details_draft_for_review_needs_review,object,categórica/textual,1,184591,99.7
+MC2 - Events,details_target_agent,str,categórica/textual,17,184912,99.87
+MC2 - Events,details_args_path,str,categórica/textual,3,184912,99.87
+MC2 - Events,details_room,str,categórica/textual,50,177727,95.99
+MC2 - Events,details_name,str,categórica/textual,49,177727,95.99
+MC2 - Events,details_granted,object,categórica/textual,1,177727,95.99
+MC2 - Events,details_file_saved,str,categórica/textual,43,184494,99.65
+MC2 - Events,details_content,str,categórica/textual,160,184697,99.76
+MC2 - Events,details_forum,str,categórica/textual,1,184934,99.88
+MC2 - Events,details_poster_id,str,categórica/textual,6,184922,99.88
+MC2 - Events,details_timestamp,str,categórica/textual,225,184922,99.88
+MC2 - Events,details_details_forum,str,categórica/textual,1,185014,99.93
+MC2 - Events,details_details_content,str,categórica/textual,199,184858,99.84
+MC2 - Events,details_question,str,categórica/textual,223,184737,99.78
+MC2 - Events,details_response,str,categórica/textual,384,184737,99.78
+MC2 - Events,details_size_hint,float64,numérica,2003,170094,91.87
+MC2 - Events,details_content_source,str,categórica/textual,3,185144,100.0
+MC2 - Events,details_combo,object,categórica/textual,5,170096,91.87
+MC2 - Events,details_source,str,categórica/textual,1,170096,91.87
+MC2 - Events,details_virus,object,categórica/textual,1,109893,59.35
+MC2 - Events,details_word_count,float64,numérica,2001,170096,91.87
+MC2 - Events,details_details_combo,object,categórica/textual,5,170097,91.87
+MC2 - Events,details_spread,object,categórica/textual,1,185143,100.0
+MC2 - Events,qtd_parties,int64,numérica,5,0,0.0
+MC2 - Events,parties_texto,str,categórica/textual,5815,0,0.0
+MC2 - Events,tipos_parties,str,categórica/textual,8,0,0.0
+MC2 - Events,timestamp,datetime64[s],temporal,171695,0,0.0
+MC2 - Events,data,object,categórica/textual,70,0,0.0
+MC2 - Events,hora,int32,numérica,24,0,0.0
+MC2 - Events,dia_semana,str,categórica/textual,7,0,0.0
+MC2 - Events,texto_evento,str,categórica/textual,31697,0,0.0
+MC2 - Events,qtd_caracteres_texto,int64,numérica,429,0,0.0
+MC2 - Events,qtd_palavras_texto,int64,numérica,60,0,0.0
+MC2 - Events,tem_texto,bool,booleana,2,0,0.0
+MC2 - Events,possui_link,bool,booleana,2,0,0.0
+MC2 - Events,possui_html,bool,booleana,1,0,0.0
+MC2 - Events,possui_hashtag,bool,booleana,1,0,0.0
+MC2 - Events,possui_mencao,bool,booleana,1,0,0.0
+MC2 - Events,possui_caracter_estranho,bool,booleana,1,0,0.0
+MC2 - Event Parties,event_id,int64,numérica,185147,0,0.0
+MC2 - Event Parties,short_name,str,categórica/textual,24,0,0.0
+MC2 - Event Parties,timestamp,datetime64[s],temporal,171695,0,0.0
+MC2 - Event Parties,party,str,categórica/textual,201,0,0.0
+MC2 - Event Parties,party_type,str,categórica/textual,6,0,0.0
+MC2 - Org Nodes,id,str,categórica/textual,75,0,0.0
+MC2 - Org Nodes,label,str,categórica/textual,75,0,0.0
+MC2 - Org Nodes,type,str,categórica/textual,4,0,0.0
+MC2 - Org Nodes,title,str,categórica/textual,4,67,89.33
+MC2 - Org Nodes,grau_saida,int64,numérica,7,0,0.0
+MC2 - Org Nodes,grau_entrada,int64,numérica,2,0,0.0
+MC2 - Org Nodes,grau_total,int64,numérica,7,0,0.0
+MC2 - Org Edges,source,str,categórica/textual,26,0,0.0
+MC2 - Org Edges,target,str,categórica/textual,74,0,0.0
+MC2 - Org Edges,relation,str,categórica/textual,2,0,0.0
